@@ -37,7 +37,7 @@ function EditarEquipoTrabajo() {
       // Cargar profesores por sede
       const profesores = {};
       for (const sede of sedes) {
-        const response = await fetch(`/api/personaRoutes/profesores/${sede}`);
+        const response = await fetch(`https://sdproject2-api.onrender.com/api/personaRoutes/profesores/${sede}`);
         console.log(response)
         if (!response.ok) {
           throw new Error('Error al obtener profesores');
@@ -48,7 +48,7 @@ function EditarEquipoTrabajo() {
       setProfesoresPorSede(profesores);
 
       // Cargar profesores coordinadores
-      const responseCoordinadores = await fetch(`/api/personaRoutes/profesoresPGC/PGC`);
+      const responseCoordinadores = await fetch(`https://sdproject2-api.onrender.com/api/personaRoutes/profesoresPGC/PGC`);
       console.log(responseCoordinadores)
       if (!responseCoordinadores.ok) {
         throw new Error('Error al obtener profesores coordinadores');
@@ -58,7 +58,7 @@ function EditarEquipoTrabajo() {
 
       // Cargar años disponibles
       cargarAños();
-      const response = await fetch(`/api/equiposTrabajoRoutes/${identificacion}`);
+      const response = await fetch(`https://sdproject2-api.onrender.com/api/equiposTrabajoRoutes/${identificacion}`);
       if (!response.ok) {
 
         throw new Error('Equipo no encontrada');
@@ -76,7 +76,7 @@ function EditarEquipoTrabajo() {
 
   const obtenerEquipo = useCallback(async () => {
     try {
-        const response = await fetch(`/api/equiposTrabajoRoutes/${identificacion}`);
+        const response = await fetch(`https://sdproject2-api.onrender.com/api/equiposTrabajoRoutes/${identificacion}`);
         if (!response.ok) {
           throw new Error('Equipo no encontrada');
         }
@@ -152,7 +152,7 @@ function EditarEquipoTrabajo() {
 
   const getNombre = async () => {
     try {
-      const response = await fetch(`/api/personaRoutes/obtener/${edicionEquipo.lider_id}`);
+      const response = await fetch(`https://sdproject2-api.onrender.com/api/personaRoutes/obtener/${edicionEquipo.lider_id}`);
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
@@ -167,7 +167,7 @@ function EditarEquipoTrabajo() {
 
   const getNombreB = async (pId) => {
     try {
-      const response = await fetch(`/api/personaRoutes/obtener/${pId}`);
+      const response = await fetch(`https://sdproject2-api.onrender.com/api/personaRoutes/obtener/${pId}`);
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
@@ -183,7 +183,7 @@ function EditarEquipoTrabajo() {
 
   const handleEditar = async () => {
     try {
-      const response = await fetch(`/api/equiposTrabajoRoutes/editar_equipo/${equipo._id}`, {
+      const response = await fetch(`https://sdproject2-api.onrender.com/api/equiposTrabajoRoutes/editar_equipo/${equipo._id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
