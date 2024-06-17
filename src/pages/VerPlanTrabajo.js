@@ -14,7 +14,7 @@ function VerPlanTrabajo() {
   useEffect(() => {
     const fetchPlanTrabajo = async () => {
       try {
-        const response = await fetch(`/api/planesTrabajoRoutes/${id}`, {
+        const response = await fetch(`https://sdproject2-api.onrender.com/api/planesTrabajoRoutes/${id}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json'
@@ -27,7 +27,7 @@ function VerPlanTrabajo() {
         setPlanTrabajo(data);
 
         // Obtener actividades asociadas al plan de trabajo
-        const actividadesResponse = await fetch(`/api/actividadesRoutes/${id}/actividades`, {
+        const actividadesResponse = await fetch(`https://sdproject2-api.onrender.com/api/actividadesRoutes/${id}/actividades`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json'
@@ -50,7 +50,7 @@ function VerPlanTrabajo() {
   const handleEliminarPlanTrabajo = async () => {
     if (tipo === 'PGC') {
       try {
-        const response = await fetch(`/api/planesTrabajoRoutes/${id}`, {
+        const response = await fetch(`https://sdproject2-api.onrender.com/api/planesTrabajoRoutes/${id}`, {
           method: 'DELETE',
           headers: {
             'Content-Type': 'application/json'
