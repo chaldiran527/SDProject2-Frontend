@@ -1,0 +1,51 @@
+.estudiante-container {
+    color: var(--color-verde-oscuro);
+    padding: 20px;
+  }
+  
+  .titulo {
+    text-align: center;
+    color: var(--color-marron-oscuro);
+    margin-bottom: 20px;
+  }
+  
+  .form-container {
+    background-color: var(--color-beige);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .form-control,
+  .form-select {
+    background-color: var(--color-beige-claro);
+    border: 1px solid var(--color-marron);
+    color: var(--color-verde-oscuro);
+  }
+  
+  .list-container {
+    margin-bottom: 20px;
+  }
+  
+  .scrollable-list {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  .pointer-cursor {
+    cursor: pointer;
+  }
+  
+  .upload-container {
+    background-color: var(--color-beige);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .botones-container {
+    text-align: center;
+  }
+  

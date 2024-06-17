@@ -1,0 +1,87 @@
+/* VerPlanTrabajo.css */
+.menuPersona {
+    background-color: var(--color-beige-claro);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .titulo {
+    font-size: 2.5rem;
+    color: var(--color-verde-oscuro);
+    border-bottom: 2px solid var(--color-marron-oscuro);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Georgia', serif;
+    letter-spacing: 1px;
+  }
+
+  .volverVerPlanTrabajo, .editarPlan, .eliminarPlan {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--color-verde-oscuro);
+    color: var(--color-blanco);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .volverVerPlanTrabajo:hover, .editarPlan:hover, .eliminarPlan:hover {
+    background-color: var(--color-marron-oscuro);
+  }
+  .planDetailsContainer {
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid var(--color-marron);
+    border-radius: 10px;
+    background-color: var(--color-beige);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .planDetails {
+    margin-bottom: 10px;
+  }
+  
+  .planDetails label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .actividadesContainer {
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid var(--color-marron);
+    border-radius: 10px;
+    background-color: var(--color-beige);
+  }
+  
+  .actividadesTitle {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .actividadesList {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .actividadButton {
+    margin: 5px;
+    padding: 10px 20px;
+    border: 2px solid var(--color-azul); /* Agregar borde */
+    border-radius: 5px;
+    background-color: var(--color-azul); /* Color de fondo de los botones */
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .actividadesContainer .actividadButton {
+    background-color: var(--color-azul);
+  }

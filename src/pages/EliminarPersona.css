@@ -1,0 +1,85 @@
+/* EliminarPersona.css */
+
+.eliminar-persona-container {
+  background-color: var(--color-beige-claro);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: var(--color-verde-oscuro);
+  border-bottom: 2px solid var(--color-marron-oscuro);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Georgia', serif;
+  letter-spacing: 1px;
+}
+
+.form-container {
+  background-color: var(--color-beige);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.form-container .form-label {
+  font-size: 1rem;
+  color: var(--color-verde-oscuro);
+}
+
+.form-container .form-control {
+  margin-bottom: 10px;
+}
+
+.form-container .form-control:focus {
+  box-shadow: 0 0 0 0.2rem var(--color-marron-oscuro);
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.button-group .btn {
+  margin: 5px;
+  flex: 1 1 auto;
+}
+
+.btn-outline-dark {
+  color: var(--color-verde-oscuro) !important;
+  background-color: var(--color-beige-claro) !important;
+  border: none !important;
+}
+
+.btn-outline-dark:hover {
+  background-color: var(--color-marron-oscuro) !important;
+  color: var(--color-blanco) !important;
+}
+
+.btn-outline-dark:focus {
+  box-shadow: 0 0 0 0.2rem var(--color-marron-oscuro) !important;
+}
+
+.btn-danger {
+  background-color: var(--color-marron-oscuro);
+  border-color: var(--color-marron-oscuro);
+}
+
+.btn-danger:hover {
+  background-color: var(--color-marron);
+  border-color: var(--color-marron);
+}
+
+.ml-3 {
+  margin-left: 1rem;
+}

@@ -1,0 +1,23 @@
+:root {
+  --color-verde-oscuro: #43766C; /* Color verde oscuro */
+  --color-beige: #F8FAE5;        /* Color beige */
+  --color-beige-claro: #B19470;  /* Color beige claro */
+  --color-marron-oscuro: #6F423A;/* Color marrón oscuro */
+  --color-marron: #BDA886;       /* Color marrón */
+  --color-verde-marron: #49736C; /* Color verde-marrón */
+  --color-blanco: #ffffff;       /* Color blanco */
+  --color-negro: #000000;        /* Color negro */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--color-beige-claro);
+  color: var(--color-verde-oscuro);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.fullscreen-container {
+  height: 100vh;
+}

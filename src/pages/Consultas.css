@@ -1,0 +1,45 @@
+.fullscreen-container {
+  height: 100vh;
+  padding-top: 20px;
+}
+
+.title {
+  font-size: 2.5em;
+  color: #333;
+}
+
+.menu-button {
+  width: 100%;
+  text-align: left;
+}
+
+.volver-button {
+  width: 100%;
+}
+
+.scrollable-list-container {
+  max-height: 600px;
+  overflow-y: auto;
+  border: 3px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.scrollable-list {
+  list-style: none;
+  padding: 0;
+}
+
+.scrollable-list-item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.scrollable-list-item:hover {
+  background-color: #f1f1f1;
+}
+
+.pointer-cursor {
+  cursor: pointer;
+}

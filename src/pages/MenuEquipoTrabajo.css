@@ -1,0 +1,36 @@
+.fullscreen-container {
+  height: 100vh;
+  padding-top: 20px;
+}
+
+.title {
+  font-size: 2em;
+  color: var(--color-verde-oscuro);
+  margin-bottom: 20px;
+}
+
+.menu-box {
+  background-color: var(--color-beige);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px; /* Adjust the width as needed */
+}
+
+.menu-button {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.volver-button {
+  background-color: var(--color-marron-oscuro);
+  border-color: var(--color-marron-oscuro);
+  color: var(--color-blanco);
+  width: 100%; /* Make the button the same width as the menu box */
+  text-align: center;
+  margin-top: 10px; /* Add some margin to separate it from the menu box */
+  padding: 10px; /* Adjust the padding as needed */
+}

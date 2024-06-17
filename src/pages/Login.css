@@ -1,0 +1,37 @@
+/* Login.css */
+.fullscreen-container .card {
+  background-color: var(--color-beige);
+  color: var(--color-negro);
+}
+
+.fullscreen-container .btn-custom {
+  background-color: var(--color-verde-marron);
+  border-color: var(--color-verde-marron);
+}
+
+.fullscreen-container .btn-custom:hover {
+  background-color: var(--color-verde-oscuro);
+  border-color: var(--color-verde-oscuro);
+}
+
+.fullscreen-container .input-dark {
+  background-color: var(--color-marron-oscuro);
+  color: var(--color-blanco);
+  border: 1px solid var(--color-marron);
+}
+
+.fullscreen-container .input-dark::placeholder {
+  color: var(--color-blanco);
+}
+
+.fullscreen-container .card-title-custom {
+  font-size: 2rem; /* Tamaño adecuado */
+  color: var(--color-verde-oscuro);
+  border-bottom: 2px solid var(--color-marron);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Georgia', serif; /* Fuente elegante */
+  letter-spacing: 1px; /* Espaciado entre letras */
+}
