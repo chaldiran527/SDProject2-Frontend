@@ -70,7 +70,7 @@ const fetchEquipos = async () => {
   console.log("Fetching equipos for año:", año, "semestre:", semestre);
 
   try {
-    const response = await axios.get('/api/equiposTrabajoRoutes/equipos_trabajo', {
+    const response = await axios.get('https://sdproject2-api.onrender.com/api/equiposTrabajoRoutes/equipos_trabajo', {
 
         año: año,
         semestre: semestre
@@ -89,7 +89,7 @@ const fetchEquipos = async () => {
     //fetchEquipos();
     setLoading(true);
     axios
-      .get('/api/equiposTrabajoRoutes/',)
+      .get('https://sdproject2-api.onrender.com/api/equiposTrabajoRoutes/',)
       .then((response) => {
         const filteredEquipos = response.data.data.filter(equipo => equipo.año === año && equipo.semestre === semestre);
         setEquipos(filteredEquipos);
