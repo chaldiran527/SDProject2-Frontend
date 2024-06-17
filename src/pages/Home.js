@@ -8,7 +8,7 @@ const Home = () => {
 
     useEffect(()=>{
         const fetchWorkout = async () =>{
-            const response = await fetch('/api/workouts')
+            const response = await fetch('https://sdproject2-api.onrender.com/api/workouts')
             const json = await response.json()
 
             if(response.ok){
