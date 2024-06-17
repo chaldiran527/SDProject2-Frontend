@@ -25,7 +25,7 @@ function ModificarActividad() {
   useEffect(() => {
     const fetchActividad = async () => {
       try {
-        const response = await fetch(`/api/actividadesRoutes/${id}`, {
+        const response = await fetch(`https://sdproject2-api.onrender.com/api/actividadesRoutes/${id}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json'
@@ -70,7 +70,7 @@ function ModificarActividad() {
 
     const fetchProfesores = async () => {
       try {
-        const response = await fetch(`/api/personaRoutes/profesores/${sedeUsuario}`);
+        const response = await fetch(`https://sdproject2-api.onrender.com/api/personaRoutes/profesores/${sedeUsuario}`);
         const data = await response.json();
         const opcionesProfesores = data.map((profesor) => ({
           value: profesor._id,
@@ -125,7 +125,7 @@ function ModificarActividad() {
 
     try {
       
-      const response = await fetch(`/api/actividadesRoutes/${id}`, {
+      const response = await fetch(`https://sdproject2-api.onrender.com/api/actividadesRoutes/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
