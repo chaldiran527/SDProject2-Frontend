@@ -7,7 +7,7 @@ function EliminarPersona() {
 
   const handleEliminar = async () => {
     try {
-      const response = await fetch(`/api/personaRoutes/eliminar/${identificacion}`, {
+      const response = await fetch(`https://sdproject2-api.onrender.com/api/personaRoutes/eliminar/${identificacion}`, {
         method: 'DELETE'
       });
 
