@@ -22,7 +22,7 @@ function MenuPrincipal() {
   useEffect(() => {
     const obtenerPersona = async () => {
       try {
-        const response = await fetch(`/api/estudianteRoutes/${carne}`);
+        const response = await fetch(`https://sdproject2-api.onrender.com/api/estudianteRoutes/${carne}`);
         if (!response.ok) {
           throw new Error('Persona no encontrada');
         }
