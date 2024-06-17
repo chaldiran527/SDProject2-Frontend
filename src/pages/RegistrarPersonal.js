@@ -38,7 +38,7 @@ function RegistrarPersonal() {
     };
 
     try {
-      const response = await fetch('/api/personaRoutes/registro', {
+      const response = await fetch('https://sdproject2-api.onrender.com/api/personaRoutes/registro', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
