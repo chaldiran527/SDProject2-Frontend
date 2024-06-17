@@ -12,7 +12,7 @@ function Buzon() {
   useEffect(() => {
     const fetchNotifications = async () => {
       try {
-        const response = await fetch(`/api/notificacionRoutes/obtener/${id}`);
+        const response = await fetch(`https://sdproject2-api.onrender.com/api/notificacionRoutes/obtener/${id}`);
         const data = await response.json();
         setNotifications(data);
       } catch (error) {
@@ -25,7 +25,7 @@ function Buzon() {
 
   const handleDelete = async (id) => {
     try {
-      await fetch(`/api/notificacionRoutes/borrar/${id}`, {
+      await fetch(`https://sdproject2-api.onrender.com/api/notificacionRoutes/borrar/${id}`, {
         method: 'DELETE'
       });
       setNotifications(notifications.filter(n => n._id !== id));
@@ -36,7 +36,7 @@ function Buzon() {
 
   const handleMarkAsRead = async (id) => {
     try {
-      const response = await fetch(`/api/notificacionRoutes/actualizar/${id}/leido`, {
+      const response = await fetch(`https://sdproject2-api.onrender.com/api/notificacionRoutes/actualizar/${id}/leido`, {
         method: 'PUT'
       });
       const updatedNotification = await response.json();
