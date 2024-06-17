@@ -54,13 +54,13 @@ useEffect(() => {
   /*
   //fetchconsultas();
   if(consultarPlanTrabajoClicked){
-        fetch('/api/planesTrabajoRoutes')
+        fetch('https://sdproject2-api.onrender.com/api/planesTrabajoRoutes')
           .then(response => response.json())
           .then(data => setconsultas(data))//          .then(data => setPlanesTrabajo(data))
           .catch(error => console.error('Error fetching planes de trabajo:', error));
     }
   else if(consultarProfesoresClicked){
-    fetch('/api/personaRoutes/listar_estudiantes')
+    fetch('https://sdproject2-api.onrender.com/api/personaRoutes/listar_estudiantes')
   .then(response => response.json())
   .then(data => {
     const estudiantesFiltrados = data.filter(estudiante => (estudiante.tipo === "AD" || estudiante.tipo === "PGC" || estudiante.tipo === "PG"));
@@ -70,7 +70,7 @@ useEffect(() => {
   .catch(error => console.error('Error fetching estudiantes:', error));  
   }
   else if(consultarEstudiantesClicked){
-    fetch('/api/personaRoutes/listar_estudiantes')
+    fetch('https://sdproject2-api.onrender.com/api/personaRoutes/listar_estudiantes')
   .then(response => response.json())
   .then(data => {
     const estudiantesFiltrados = data.filter(estudiante => estudiante.tipo === "ES");
@@ -80,7 +80,7 @@ useEffect(() => {
   .catch(error => console.error('Error fetching estudiantes:', error));
   }
   */
-  fetch(`/api/personaRoutes/${correo}/sede`)
+  fetch(`https://sdproject2-api.onrender.com/api/personaRoutes/${correo}/sede`)
   .then(response => response.json())
   .then(data => {
     setSede(data.sede); // Set the user's sede
@@ -113,7 +113,7 @@ const handleConsultarEstudiantesClick = () => {
 
 const handleProfesores = () => {
   handleConsultProfesoresClick();
-  fetch('/api/personaRoutes/listar_estudiantes')
+  fetch('https://sdproject2-api.onrender.com/api/personaRoutes/listar_estudiantes')
   .then(response => response.json())
   .then(data => {
     //const estudiantesFiltrados = data.filter(estudiante => (estudiante.tipo === "AD" || estudiante.tipo === "PGC" || estudiante.tipo === "PG"));
@@ -127,7 +127,7 @@ const handleProfesores = () => {
 
 const handlePlanes = () =>{
   handleConsultarPlanTrabajoClick();
-  fetch('/api/planesTrabajoRoutes')
+  fetch('https://sdproject2-api.onrender.com/api/planesTrabajoRoutes')
   .then(response => response.json())
   .then(data => setconsultas(data))//          .then(data => setPlanesTrabajo(data))
   .catch(error => console.error('Error fetching planes de trabajo:', error));
@@ -140,7 +140,7 @@ const handleBuscarAlfa = () => {
   setLoading(true); // Iniciar el estado de carga
 
   // Hacer una solicitud al servidor para obtener la lista de estudiantes
-  fetch('/api/estudianteRoutes/listar_estudiantes')
+  fetch('https://sdproject2-api.onrender.com/api/estudianteRoutes/listar_estudiantes')
     .then((response) => response.json())
     .then((data) => {
       // Filtrar estudiantes por sede específica
@@ -161,7 +161,7 @@ const handleBuscarAlfa = () => {
 
  const handleBuscarESTodos = () => {
   handleConsultarEstudiantesClick();
-  fetch('/api/personaRoutes/listar_estudiantes')
+  fetch('https://sdproject2-api.onrender.com/api/personaRoutes/listar_estudiantes')
   .then(response => response.json())
   .then(data => {
     //const estudiantesFiltrados = data.filter(estudiante => estudiante.tipo === "ES");
