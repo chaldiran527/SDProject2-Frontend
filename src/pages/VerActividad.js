@@ -14,7 +14,7 @@ function VerActividad() {
   useEffect(() => {
     const fetchActividad = async () => {
       try {
-        const response = await fetch(`/api/actividadesRoutes/${id}`, {
+        const response = await fetch(`https://sdproject2-api.onrender.com/api/actividadesRoutes/${id}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json'
@@ -52,7 +52,7 @@ function VerActividad() {
   const handleEliminarActividad = async () => {
     if (tipo === 'PGC') {
       try {
-        const response = await fetch(`/api/actividadesRoutes/${id}`, {
+        const response = await fetch(`https://sdproject2-api.onrender.com/api/actividadesRoutes/${id}`, {
           method: 'DELETE',
           headers: {
             'Content-Type': 'application/json'
