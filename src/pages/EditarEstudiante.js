@@ -25,7 +25,7 @@ function EditarEstudiante() {
 
   const obtenerPersona = useCallback(async () => {
     try {
-      const response = await fetch(`/api/estudianteRoutes/${identificacion}`);
+      const response = await fetch(`https://sdproject2-api.onrender.com/api/estudianteRoutes/${identificacion}`);
       if (!response.ok) {
         throw new Error('Persona no encontrada');
       }
@@ -59,7 +59,7 @@ function EditarEstudiante() {
     if (foto) formData.append('foto', foto);
 
     try {
-      const response = await fetch(`/api/estudianteRoutes/editar/${identificacion}`, {
+      const response = await fetch(`https://sdproject2-api.onrender.com/api/estudianteRoutes/editar/${identificacion}`, {
         method: 'PUT',
         /*
         headers: {
