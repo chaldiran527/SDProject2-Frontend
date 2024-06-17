@@ -9,7 +9,7 @@ function MenuActividades() {
   const { tipo } = usuario;
 
   useEffect(() => {
-    fetch('/api/actividadesRoutes/listar_actividades')
+    fetch('https://sdproject2-api.onrender.com/api/actividadesRoutes/listar_actividades')
       .then(response => response.json())
       .then(data => setActividades(data))
       .catch(error => console.error('Error fetching planes de trabajo:', error));
