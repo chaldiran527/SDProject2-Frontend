@@ -22,7 +22,7 @@ function EditarPersona() {
 
   const obtenerPersona = useCallback(async () => {
     try {
-      const response = await fetch(`/api/personaRoutes/${identificacion}`);
+      const response = await fetch(`https://sdproject2-api.onrender.com/api/personaRoutes/${identificacion}`);
       if (!response.ok) {
         throw new Error('Persona no encontrada');
       }
@@ -41,7 +41,7 @@ function EditarPersona() {
 
   const handleGuardarCambios = async () => {
     try {
-      const response = await fetch(`/api/personaRoutes/editar/${identificacion}`, {
+      const response = await fetch(`https://sdproject2-api.onrender.com/api/personaRoutes/editar/${identificacion}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
