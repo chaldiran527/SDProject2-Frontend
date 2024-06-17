@@ -8,7 +8,7 @@ function InscribirActividad() {
   useEffect(() => {
     const fetchActividad = async () => {
       try {
-        const response = await fetch(`/api/actividadesRoutes/${id}`, {
+        const response = await fetch(`https://sdproject2-api.onrender.com/api/actividadesRoutes/${id}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json'
@@ -41,7 +41,7 @@ function InscribirActividad() {
 
   const handleInscribirse = async () => {
     try {
-      const response = await fetch(`/api/actividadesRoutes/${id}/inscribirse`, {
+      const response = await fetch(`https://sdproject2-api.onrender.com/api/actividadesRoutes/${id}/inscribirse`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
