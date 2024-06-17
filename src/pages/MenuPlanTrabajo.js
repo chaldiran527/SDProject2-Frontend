@@ -9,7 +9,7 @@ function MenuPlanTrabajo() {
   const { tipo } = usuario;
 
   useEffect(() => {
-    fetch('/api/planesTrabajoRoutes')
+    fetch('https://sdproject2-api.onrender.com/api/planesTrabajoRoutes')
       .then(response => response.json())
       .then(data => setPlanesTrabajo(data))
       .catch(error => console.error('Error fetching planes de trabajo:', error));
