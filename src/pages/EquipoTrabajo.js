@@ -16,7 +16,7 @@ function EquipoTrabajo() {
     try {
       const profesores = {};
       for (const sede of sedes) {
-        const response = await fetch(`/api/personaRoutes/profesores/${sede}`);
+        const response = await fetch(`https://sdproject2-api.onrender.com/api/personaRoutes/profesores/${sede}`);
         if (!response.ok) {
           throw new Error('Error al obtener profesores');
         }
@@ -25,7 +25,7 @@ function EquipoTrabajo() {
       }
       setProfesoresPorSede(profesores);
 
-      const responseCoordinadores = await fetch(`/api/personaRoutes/profesoresPGC/PGC`);
+      const responseCoordinadores = await fetch(`https://sdproject2-api.onrender.com/api/personaRoutes/profesoresPGC/PGC`);
       if (!responseCoordinadores.ok) {
         throw new Error('Error al obtener profesores coordinadores');
       }
@@ -70,7 +70,7 @@ function EquipoTrabajo() {
     };
 
     try {
-      const response = await fetch('/api/personaRoutes/equipoTrabajo', {
+      const response = await fetch('https://sdproject2-api.onrender.com/api/personaRoutes/equipoTrabajo', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
