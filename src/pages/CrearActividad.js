@@ -24,7 +24,7 @@ function CrearActividad() {
 
     const fetchProfesores = async () => {
       try {
-        const response = await fetch(`/api/personaRoutes/profesores/${sedeUsuario}`);
+        const response = await fetch(`https://sdproject2-api.onrender.com/api/personaRoutes/profesores/${sedeUsuario}`);
         const data = await response.json();
         const opcionesProfesores = data.map((profesor) => ({
           value: profesor._id,
@@ -87,7 +87,7 @@ function CrearActividad() {
       const urlParts = window.location.href.split('/');
       const idPlanTrabajo = urlParts[urlParts.length - 1];
       
-      const response = await fetch(`/api/actividadesRoutes`, {
+      const response = await fetch(`https://sdproject2-api.onrender.com/api/actividadesRoutes`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
