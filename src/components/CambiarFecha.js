@@ -12,7 +12,7 @@ const CambiarFecha = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('/api/fechaSistemaRoutes', {
+      const response = await fetch('https://sdproject2-api.onrender.com/api/fechaSistemaRoutes', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
