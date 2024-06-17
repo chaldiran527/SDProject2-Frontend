@@ -14,7 +14,7 @@ function PlanTrabajo() {
     // Buscar el ID del usuario en el backend
     const fetchUsuarioId = async () => {
       try {
-        const response = await fetch(`/api/personaRoutes/${correo}/id`, {
+        const response = await fetch(`https://sdproject2-api.onrender.com/api/personaRoutes/${correo}/id`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json'
@@ -42,7 +42,7 @@ function PlanTrabajo() {
 
   const handleRegistrar = async () => {
     try {
-      const responsePlanTrabajo = await fetch('/api/planesTrabajoRoutes', {
+      const responsePlanTrabajo = await fetch('https://sdproject2-api.onrender.com/api/planesTrabajoRoutes', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
