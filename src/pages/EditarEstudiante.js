@@ -56,7 +56,11 @@ function EditarEstudiante() {
     formData.append('celular', edicionPersona.celular);
     formData.append('sede', edicionPersona.sede);
     formData.append('tipo', edicionPersona.tipo);
-    if (foto) formData.append('foto', foto);
+    if (foto) {
+      formData.append('foto', foto);
+    } else{
+      formData.append('foto', fotoPreview);
+    }
 
     try {
       const response = await fetch(`https://sdproject2-api.onrender.com/api/estudianteRoutes/editar/${identificacion}`, {
