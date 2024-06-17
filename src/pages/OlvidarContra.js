@@ -16,7 +16,7 @@ function OlvidarContra() {
       const code = Math.floor(Math.random() * 1000000).toString().padStart(6, '0');
       setCodigo(code);
 
-      const response = await axios.post('/api/personaRoutes/enviar_correo', { email, codigo: code });
+      const response = await axios.post('https://sdproject2-api.onrender.com/api/personaRoutes/enviar_correo', { email, codigo: code });
  
       console.log('Email sent successfully');
       alert(`Codigo enviado a ${email}`);
@@ -29,7 +29,7 @@ function OlvidarContra() {
   try{
     if (codigoUsuario === codigo) {
       // Call API to update the password with newPassword
-      const response = await axios.put(`/api/personaRoutes/editarContra/${email}`, { newPassword });
+      const response = await axios.put(`https://sdproject2-api.onrender.com/api/personaRoutes/editarContra/${email}`, { newPassword });
       console.log("Updating password with new value:", newPassword);
       alert('La contraseña ha sido cambiada');
       window.location.href = '/';
@@ -49,7 +49,7 @@ function OlvidarContra() {
     try {
 
         if (codigoUsuario === codigo) {
-          const response = await axios.put(`/api/personaRoutes/editarContra/${email}`, { newPassword });
+          const response = await axios.put(`https://sdproject2-api.onrender.com/api/personaRoutes/editarContra/${email}`, { newPassword });
           console.log(response.data.message); // Assuming the API returns a message upon success
           alert('La contraseña ha sido cambiada');
           window.location.href = '/';
