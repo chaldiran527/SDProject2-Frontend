@@ -8,7 +8,7 @@ function Login() {
 
   const handleLogin = async () => {
     try {
-      const response = await fetch('/api/personaRoutes/auth', {
+      const response = await fetch('https://sd-project2-frontend.vercel.app/api/personaRoutes/auth', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
