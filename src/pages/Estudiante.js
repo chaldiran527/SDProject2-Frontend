@@ -13,7 +13,7 @@ function Estudiante() {
   const handleBuscarCampus = () => {
     if (campus !== '') {
       setLoading(true);
-      fetch('/api/estudianteRoutes/listar_estudiantes')
+      fetch('https://sdproject2-api.onrender.com/api/estudianteRoutes/listar_estudiantes')
         .then((response) => response.json())
         .then((data) => {
           const estudiantesPorSede = data.filter((estudiante) => estudiante.sede === campus);
@@ -31,7 +31,7 @@ function Estudiante() {
 
   const handleBuscarAlfa = () => {
     setLoading(true);
-    fetch('/api/estudianteRoutes/listar_estudiantes')
+    fetch('https://sdproject2-api.onrender.com/api/estudianteRoutes/listar_estudiantes')
       .then((response) => response.json())
       .then((data) => {
         data.sort((a, b) => a.nombre.localeCompare(b.nombre));
@@ -70,7 +70,7 @@ function Estudiante() {
         student.celular = student.celular.toString();
 
         try {
-          const response = await fetch('/api/estudianteRoutes/registro', {
+          const response = await fetch('https://sdproject2-api.onrender.com/api/estudianteRoutes/registro', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
